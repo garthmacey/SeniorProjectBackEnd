@@ -1,0 +1,1156 @@
+{
+	"info": {
+		"_postman_id": "87f95cc2-0840-4c03-bbeb-e8ae8ff2062a",
+		"name": "Endpoint Test Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin View Controller",
+			"item": [
+				{
+					"name": "<>/api/buildmaps",
+					"item": [
+						{
+							"name": "GET api/buildmaps/",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/buildmaps/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"buildmaps",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST api/buildmaps/",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"environment\":\"buildMapTest1\",\n\t\"drivetype\":\"buildMapTest1\",\n\t\"buildid\": \"99999\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/buildmaps/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"buildmaps",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH api/buildmaps/",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"oldbuildid\" : \"99999\",\n\t\"buildid\" : \"100000\",\n\t\"environment\" : \"buildMapTest2\",\n\t\"drivetype\" : \"buildMapTest2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/buildmaps/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"buildmaps",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE api/buildmaps/",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"buildid\" : \"100000\"\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/buildmaps/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"buildmaps",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "68fbd6e4-8bb2-424f-a51a-d71fd346c267",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "67593e36-ba7f-48fe-a7fe-77a1f11184b5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "<>/api/drivetypes",
+					"item": [
+						{
+							"name": "GET api/drivetypes/",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/drivetypes/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"drivetypes",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST api/drivetypes/",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"TestDrive1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/drivetypes/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"drivetypes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH api/drivetypes/",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"oldName\" : \"TestDrive1\",\n\t\"newName\" : \"TestDrive2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/drivetypes/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"drivetypes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE api/drivetypes/",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"TestDrive2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/drivetypes/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"drivetypes",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "<>/api/environments",
+					"item": [
+						{
+							"name": "GET api/environments/",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/environments/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"environments",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST api/environments/",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"TestEnv1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/environments/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"environments",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH api/environments/",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"oldName\" : \"TestEnv1\",\n\t\"newName\" : \"TestEnv2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/environments/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"environments",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete api/environments/",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "azure",
+										"value": "{{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "organization",
+										"value": "{{Organization}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"TestEnv2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/environments/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"environments",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Builds Controller",
+			"item": [
+				{
+					"name": "GET api/builds/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/builds/?project={{Project}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"builds",
+								""
+							],
+							"query": [
+								{
+									"key": "project",
+									"value": "{{Project}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/queue/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": \"{{Project}}\",\n    \"driveType\": \"{{Drive}}\",\n    \"testEnv\": \"{{Env}}\",\n    \"PCArtifacts\": \"{{PCArt}}\",\n    \"APPArtifacts\": \"{{APPArt}}\",\n    \"CCArtifacts\": \"{{CCArt}}\",\n    \"numberOfRuns\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/queue/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"queue",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f8e6189c-91b4-4853-a7dc-cf1bb82225e4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "717ca54f-ba9a-4edb-b4b1-9854d6c5eff1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Configuration Controller",
+			"item": [
+				{
+					"name": "POST api/configMap/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"configid\": \"1234567\",\n    \"buildid\": \"4\",\n    \"applicationid\": \"demoApplication1\",\n    \"firmwareid\": \"demoFirmware1\",\n    \"powercardid\": \"demoPowerCard1\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/configMap/?configid=1&buildid=4&applicationid=3&firmwareid=4&powercardid=5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"configMap",
+								""
+							],
+							"query": [
+								{
+									"key": "configid",
+									"value": "1"
+								},
+								{
+									"key": "buildid",
+									"value": "4"
+								},
+								{
+									"key": "applicationid",
+									"value": "3"
+								},
+								{
+									"key": "firmwareid",
+									"value": "4"
+								},
+								{
+									"key": "powercardid",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/configMap/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"configid\": \"1234567\",\n    \"buildid\": \"4\",\n    \"applicationid\": \"demoApplication1\",\n    \"firmwareid\": \"demoFirmware1\",\n    \"powercardid\": \"demoPowerCard1\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/configMap/?configid=1&buildid=4&applicationid=3&firmwareid=4&powercardid=5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"configMap",
+								""
+							],
+							"query": [
+								{
+									"key": "configid",
+									"value": "1"
+								},
+								{
+									"key": "buildid",
+									"value": "4"
+								},
+								{
+									"key": "applicationid",
+									"value": "3"
+								},
+								{
+									"key": "firmwareid",
+									"value": "4"
+								},
+								{
+									"key": "powercardid",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH api/configMap/",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"configid\": \"1234567\",\n    \"buildid\": \"5\",\n    \"applicationid\": \"demoApplication1\",\n    \"firmwareid\": \"demoFirmware1\",\n    \"powercardid\": \"demoPowerCard1\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/configMap/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"configMap",
+								""
+							],
+							"query": [
+								{
+									"key": "configid",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "buildid",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "applicationid",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "firmwareid",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "powercardid",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/configMap/",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"configid\": \"1234567\",\n    \"buildid\": \"5\",\n    \"applicationid\": \"demoApplication1\",\n    \"firmwareid\": \"demoFirmware1\",\n    \"powercardid\": \"demoPowerCard1\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/configMap/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"configMap",
+								""
+							],
+							"query": [
+								{
+									"key": "configid",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "buildid",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "applicationid",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "firmwareid",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "powercardid",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pipeline Controller",
+			"item": [
+				{
+					"name": "GET api/pipelines/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/pipelines?project={{Project}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"pipelines"
+							],
+							"query": [
+								{
+									"key": "project",
+									"value": "{{Project}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Artifacts Controller",
+			"item": [
+				{
+					"name": "GET api/artifacts/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "azure",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "organization",
+								"value": "{{Organization}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": \"{{Project}}\",\n    \"driveType\": \"{{Drive}}\",\n    \"testEnv\": \"{{Env}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/artifacts/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"artifacts",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bce30d33-6d12-45da-84c0-49b5bd1e75a5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5b714807-7538-4ea5-a4fb-5d9e2cdc7be7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b838bed8-75e2-4897-85f4-7057b6c697c0",
+			"key": "Token",
+			"value": "GENERATE ME",
+			"type": "string"
+		},
+		{
+			"id": "b2c17b10-72eb-4b13-a752-2ed5f6254f0d",
+			"key": "Organization",
+			"value": "adasupershi",
+			"type": "string"
+		},
+		{
+			"id": "376ea21d-f4b3-4dbf-97d8-46de8d255912",
+			"key": "Type",
+			"value": "application/json",
+			"type": "string"
+		},
+		{
+			"id": "65725f38-d3e5-4a7d-83a5-a1bf02d3513c",
+			"key": "Repo",
+			"value": "SE4330-Mario",
+			"type": "string"
+		},
+		{
+			"id": "dbfddd19-aa92-4646-bdec-d8cab26abd85",
+			"key": "Project",
+			"value": "SE4330-Mario",
+			"type": "string"
+		},
+		{
+			"id": "42a24964-a31a-424d-a43e-4ae8bf39493e",
+			"key": "Drive",
+			"value": "Lean",
+			"type": "string"
+		},
+		{
+			"id": "04dcce89-7157-4e39-9cdc-735764d93718",
+			"key": "Env",
+			"value": "Emulator",
+			"type": "string"
+		},
+		{
+			"id": "bfa7c3c6-abb4-412e-9f1d-1bc4f4551e5b",
+			"key": "PCArt",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "3cf4a9a1-8ff4-40dd-9cbd-1bced56ebb0b",
+			"key": "APPArt",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "ff8cb768-f5f1-4e93-819e-7349369cebc6",
+			"key": "CCArt",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "491d5a29-7772-432f-a18e-79a725b7f21f",
+			"key": "URL",
+			"value": "127.0.0.1:8000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
